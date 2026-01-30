@@ -8,15 +8,34 @@
     <style>
         :root { --gold: #d4af37; --stone: #1a1a1a; --cream: #fdfaf5; }
         body { font-family: 'Cormorant Garamond', serif; background-color: var(--cream); color: #333; margin: 0; padding: 0; line-height: 1.6; }
+
+        /* --- HEADER : PHOTO DE FAÇADE --- */
         header {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                         url('https://lh3.googleusercontent.com/p/AF1QipN38Hn-K6Z3V_t0vM9XU6F9V3Z7Y4X5D8W2E1F6=s1360-w1360-h1020') no-repeat center/cover;
-            height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
         }
+
         h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 5.5rem); margin: 0; color: var(--gold); letter-spacing: 10px; text-shadow: 3px 3px 15px rgba(0,0,0,0.8); }
         .location-tag { font-family: 'Cinzel', serif; letter-spacing: 5px; color: #fff; font-size: 1.3rem; margin-top: 10px; text-transform: uppercase; }
+
         .reserver-banner { background: var(--stone); color: white; text-align: center; padding: 40px 20px; border-bottom: 2px solid var(--gold); }
-        .phone-link { color: white; text-decoration: none; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: bold; letter-spacing: 4px; }
+        .reserver-text { display: block; font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 3px; color: var(--gold); margin-bottom: 10px; text-transform: uppercase; }
+        .phone-link { color: white; text-decoration: none; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: bold; letter-spacing: 4px; transition: 0.3s; }
+        .phone-link:hover { color: var(--gold); }
+        
+        .address-box { margin-top: 20px; font-family: 'Cinzel', serif; font-size: 1.1rem; }
+        .map-btn { display: inline-block; margin-top: 15px; padding: 10px 25px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .map-btn:hover { background: var(--gold); color: var(--stone); }
+
         .container { max-width: 1000px; margin: 40px auto; background: white; padding: 60px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
         .section-title { text-align: center; font-family: 'Cinzel', serif; color: var(--stone); margin: 50px 0 30px; font-size: 1.8rem; border-bottom: 1px solid var(--gold); padding-bottom: 10px; text-transform: uppercase; }
         .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 50px; }
@@ -26,10 +45,15 @@
         .dots { flex: 1; border-bottom: 1px dotted #bbb; margin: 0 10px; }
         .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
         .desc { font-style: italic; font-size: 1rem; color: #666; display: block; margin-top: 3px; }
+
         .info-section { background: #111; color: white; padding: 60px 20px; text-align: center; }
-        footer { text-align:center; padding: 30px 20px; background:#000; color: #666; }
-        .social-link { color: #666; text-decoration: none; margin: 0 15px; display: inline-block; transition: 0.3s; }
-        @media (max-width: 850px) { .menu-grid { grid-template-columns: 1fr; } .container { padding: 25px; } }
+        .closed { color: #ccaa77; font-weight: bold; margin-top: 15px; font-size: 1.1rem; }
+
+        footer { text-align:center; padding: 40px 20px; background:#000; color: #666; font-size: 0.9rem; }
+        .social-link { color: #d4af37; text-decoration: none; margin: 0 15px; display: inline-block; font-family: 'Cinzel', serif; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+        .social-link:hover { color: white; }
+
+        @media (max-width: 850px) { .menu-grid { grid-template-columns: 1fr; } .container { padding: 25px; } header { height: 70vh; } }
     </style>
 </head>
 <body>
@@ -40,9 +64,12 @@
 </header>
 
 <div class="reserver-banner">
-    <span style="display:block; color:var(--gold); font-family:'Cinzel'; margin-bottom:10px;">Réservations uniquement par téléphone</span>
+    <span class="reserver-text">Réservations uniquement par téléphone</span>
     <a href="tel:0466033384" class="phone-link">04 66 03 33 84</a>
-    <div style="margin-top:20px; font-family:'Cinzel';">10 Place du Huit Mai, 30210 Castillon-du-Gard</div>
+    <div class="address-box">
+        10 Place du Huit Mai, 30210 Castillon-du-Gard<br>
+        <a href="https://goo.gl/maps/q9y3N9V6Y7mU5R6S7" target="_blank" class="map-btn">📍 Voir l'itinéraire</a>
+    </div>
 </div>
 
 <div class="container">
@@ -89,15 +116,17 @@
 <section class="info-section">
     <h3>Horaires & Informations</h3>
     <p>Ouvert tous les jours (Midi & Soir)</p>
-    <p style="color:#ccaa77; font-weight:bold;">Fermé le Mardi, Mercredi et Dimanche soir</p>
+    <p class="closed">Fermé le Mardi, Mercredi et Dimanche soir</p>
 </section>
 
-<footer style="background:#000; color:#666; text-align:center; padding:30px;">
-    <div style="margin-bottom:20px;">
+<footer>
+    <div style="margin-bottom: 25px;">
         <a href="https://www.facebook.com/Lesjarrescastillon" target="_blank" class="social-link">Facebook</a>
         <a href="https://www.instagram.com/les_jarres_castillon" target="_blank" class="social-link">Instagram</a>
     </div>
-    <p>© Restaurant Les Jarres - Village Médiéval de Castillon-du-Gard</p>
+    <div style="letter-spacing: 1px; font-family: 'Cinzel', serif;">
+        © Restaurant Les Jarres - Village Médiéval de Castillon-du-Gard
+    </div>
 </footer>
 
 </body>
