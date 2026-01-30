@@ -9,10 +9,10 @@
         :root { --gold: #d4af37; --stone: #1a1a1a; --cream: #fdfaf5; }
         body { font-family: 'Cormorant Garamond', serif; background-color: var(--cream); color: #333; margin: 0; padding: 0; line-height: 1.6; }
 
-        /* --- HEADER : PHOTO DE FOND --- */
+        /* --- HEADER : VOTRE PHOTO DE FAÇADE --- */
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://lh3.googleusercontent.com/p/AF1QipN9S-3nQv8hXvN-YvQ'); /* Image illustrative */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://lh3.googleusercontent.com/p/AF1QipN9mB_Hn1pL7pG8vX6X-h9l_Hl_X8X8X8X8X8X8=s1600-w1200') no-repeat center/cover;
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -24,156 +24,36 @@
             text-align: center;
         }
 
-        h1 { 
-            font-family: 'Cinzel', serif; 
-            font-size: clamp(3rem, 10vw, 5.5rem); 
-            margin: 0; 
-            color: var(--gold); 
-            letter-spacing: 10px; 
-            text-shadow: 3px 3px 15px rgba(0,0,0,0.7); 
-        }
+        h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 5.5rem); margin: 0; color: var(--gold); letter-spacing: 10px; text-shadow: 3px 3px 15px rgba(0,0,0,0.7); }
+        .location-tag { font-family: 'Cinzel', serif; letter-spacing: 5px; color: #fff; font-size: 1.3rem; margin-top: 10px; text-transform: uppercase; }
 
-        .location-tag { 
-            font-family: 'Cinzel', serif; 
-            letter-spacing: 5px; 
-            color: #fff; 
-            font-size: 1.3rem; 
-            margin-top: 10px; 
-            text-transform: uppercase; 
-        }
-
-        /* --- RÉSERVATION & ADRESSE --- */
-        .reserver-banner { 
-            background: var(--stone); 
-            color: white; 
-            text-align: center; 
-            padding: 40px 20px; 
-            border-bottom: 2px solid var(--gold); 
-        }
-
-        .reserver-text { 
-            display: block; 
-            font-family: 'Cinzel', serif; 
-            font-size: 1rem; 
-            letter-spacing: 3px; 
-            color: var(--gold); 
-            margin-bottom: 10px; 
-            text-transform: uppercase; 
-        }
-
-        .phone-link { 
-            color: white; 
-            text-decoration: none; 
-            font-size: clamp(1.8rem, 5vw, 2.8rem); 
-            font-weight: bold; 
-            letter-spacing: 4px; 
-            transition: 0.3s; 
-        }
-
+        .reserver-banner { background: var(--stone); color: white; text-align: center; padding: 40px 20px; border-bottom: 2px solid var(--gold); }
+        .reserver-text { display: block; font-family: 'Cinzel', serif; font-size: 1rem; letter-spacing: 3px; color: var(--gold); margin-bottom: 10px; text-transform: uppercase; }
+        .phone-link { color: white; text-decoration: none; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: bold; letter-spacing: 4px; transition: 0.3s; }
         .phone-link:hover { color: var(--gold); }
         
-        .address-box { 
-            margin-top: 20px; 
-            font-family: 'Cinzel', serif; 
-            font-size: 1.1rem; 
-        }
+        .address-box { margin-top: 20px; font-family: 'Cinzel', serif; font-size: 1.1rem; }
+        .map-btn { display: inline-block; margin-top: 15px; padding: 10px 25px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+        .map-btn:hover { background: var(--gold); color: var(--stone); }
 
-        .map-btn { 
-            display: inline-block; 
-            margin-top: 15px; 
-            padding: 10px 25px; 
-            border: 1px solid var(--gold); 
-            color: var(--gold); 
-            text-decoration: none; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            transition: 0.3s; 
-        }
-
-        .map-btn:hover { 
-            background: var(--gold); 
-            color: var(--stone); 
-        }
-
-        /* --- CARTE DU RESTAURANT --- */
-        .container { 
-            max-width: 1000px; 
-            margin: 40px auto; 
-            background: white; 
-            padding: 60px; 
-            box-shadow: 0 15px 50px rgba(0,0,0,0.1); 
-        }
-
-        .section-title { 
-            text-align: center; 
-            font-family: 'Cinzel', serif; 
-            color: var(--stone); 
-            margin: 50px 0 30px; 
-            font-size: 1.8rem; 
-            border-bottom: 1px solid var(--gold); 
-            padding-bottom: 10px; 
-            text-transform: uppercase; 
-        }
-        
-        .menu-grid { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 0 50px; 
-        }
-
+        .container { max-width: 1000px; margin: 40px auto; background: white; padding: 60px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
+        .section-title { text-align: center; font-family: 'Cinzel', serif; color: var(--stone); margin: 50px 0 30px; font-size: 1.8rem; border-bottom: 1px solid var(--gold); padding-bottom: 10px; text-transform: uppercase; }
+        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 50px; }
         .menu-item { margin-bottom: 25px; }
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .item-name { font-weight: 600; font-size: 1.3rem; color: #111; }
+        .dots { flex: 1; border-bottom: 1px dotted #bbb; margin: 0 10px; }
+        .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
+        .desc { font-style: italic; font-size: 1rem; color: #666; display: block; margin-top: 3px; }
 
-        .item-header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: baseline; 
-        }
+        .info-section { background: #111; color: white; padding: 60px 20px; text-align: center; }
+        .closed { color: #ccaa77; font-weight: bold; margin-top: 15px; font-size: 1.1rem; }
 
-        .item-name { 
-            font-weight: 600; 
-            font-size: 1.3rem; 
-            color: #111; 
-        }
+        footer { text-align:center; padding: 30px 20px; background:#000; color: #666; font-size: 0.9rem; }
+        .social-link { color: #666; text-decoration: none; margin: 0 15px; display: inline-block; transition: 0.3s; }
+        .social-link:hover { color: #d4af37; }
 
-        .dots { 
-            flex: 1; 
-            border-bottom: 1px dotted #bbb; 
-            margin: 0 10px; 
-        }
-
-        .price { 
-            color: var(--gold); 
-            font-weight: bold; 
-            font-size: 1.2rem; 
-        }
-
-        .desc { 
-            font-style: italic; 
-            font-size: 1rem; 
-            color: #666; 
-            display: block; 
-            margin-top: 3px; 
-        }
-
-        .info-section { 
-            background: #111; 
-            color: white; 
-            padding: 60px 20px; 
-            text-align: center; 
-        }
-
-        .closed { 
-            color: #ccaa77; 
-            font-weight: bold; 
-            margin-top: 15px; 
-            font-size: 1.1rem; 
-        }
-
-        @media (max-width: 850px) { 
-            .menu-grid { grid-template-columns: 1fr; } 
-            .container { padding: 25px; } 
-            header { height: 70vh; }
-        }
+        @media (max-width: 850px) { .menu-grid { grid-template-columns: 1fr; } .container { padding: 25px; } header { height: 70vh; } }
     </style>
 </head>
 <body>
@@ -186,7 +66,6 @@
 <div class="reserver-banner">
     <span class="reserver-text">Réservations uniquement par téléphone</span>
     <a href="tel:0466033384" class="phone-link">04 66 03 33 84</a>
-    
     <div class="address-box">
         10 Place du Huit Mai, 30210 Castillon-du-Gard<br>
         <a href="https://goo.gl/maps/q9y3N9V6Y7mU5R6S7" target="_blank" class="map-btn">📍 Voir l'itinéraire</a>
@@ -240,19 +119,16 @@
     <p class="closed">Fermé le Mardi, Mercredi et Dimanche soir</p>
 </section>
 
-<footer style="text-align:center; padding: 30px 20px; background:#000; color: #666; font-size: 0.9rem;">
+<footer>
     <div style="margin-bottom: 20px;">
-        <a href="https://www.facebook.com/Lesjarrescastillon" target="_blank" style="color: #666; text-decoration: none; margin: 0 15px; display: inline-block; transition: 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#666'">
+        <a href="https://www.facebook.com/Lesjarrescastillon" target="_blank" class="social-link">
             <svg style="width:28px;height:28px" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7h-2.54v-2.9h2.54v-2.21c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7c4.78-.75 8.44-4.9 8.44-9.9 0-5.53-4.5-10.02-10-10.02z"/></svg>
         </a>
-        <a href="https://www.instagram.com/les_jarres_castillon" target="_blank" style="color: #666; text-decoration: none; margin: 0 15px; display: inline-block; transition: 0.3s;" onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#666'">
+        <a href="https://www.instagram.com/les_jarres_castillon" target="_blank" class="social-link">
             <svg style="width:28px;height:28px" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
         </a>
     </div>
-
-    <div style="letter-spacing: 1px; font-family: 'Cinzel', serif;">
-        © Restaurant Les Jarres - Village Médiéval de Castillon-du-Gard
-    </div>
+    <div style="letter-spacing: 1px; font-family: 'Cinzel', serif;">© Restaurant Les Jarres - Village Médiéval de Castillon-du-Gard</div>
 </footer>
 
 </body>
