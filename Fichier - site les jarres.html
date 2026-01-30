@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Les Jarres | Castillon-du-Gard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --stone: #1a1a1a; --cream: #fdfaf5; }
+        body { font-family: 'Cormorant Garamond', serif; background-color: var(--cream); color: #333; margin: 0; padding: 0; line-height: 1.6; }
+
+        /* --- HEADER : PHOTO DE FOND --- */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://lh5.googleusercontent.com/p/AF1QipP1ku3ke-HOR8RdLcPKZWOpt1Qn8IPEhisT04UW=w1200-h800-no');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        h1 { 
+            font-family: 'Cinzel', serif; 
+            font-size: clamp(3rem, 10vw, 5.5rem); 
+            margin: 0; 
+            color: var(--gold); 
+            letter-spacing: 10px; 
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7); 
+        }
+
+        .location-tag { 
+            font-family: 'Cinzel', serif; 
+            letter-spacing: 5px; 
+            color: #fff; 
+            font-size: 1.3rem; 
+            margin-top: 10px; 
+            text-transform: uppercase; 
+        }
+
+        /* --- RÉSERVATION & ADRESSE --- */
+        .reserver-banner { 
+            background: var(--stone); 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+            border-bottom: 2px solid var(--gold); 
+        }
+
+        .reserver-text { 
+            display: block; 
+            font-family: 'Cinzel', serif; 
+            font-size: 1rem; 
+            letter-spacing: 3px; 
+            color: var(--gold); 
+            margin-bottom: 10px; 
+            text-transform: uppercase; 
+        }
+
+        .phone-link { 
+            color: white; 
+            text-decoration: none; 
+            font-size: clamp(1.8rem, 5vw, 2.8rem); 
+            font-weight: bold; 
+            letter-spacing: 4px; 
+            transition: 0.3s; 
+        }
+
+        .phone-link:hover { color: var(--gold); }
+        
+        .address-box { 
+            margin-top: 20px; 
+            font-family: 'Cinzel', serif; 
+            font-size: 1.1rem; 
+        }
+
+        .map-btn { 
+            display: inline-block; 
+            margin-top: 15px; 
+            padding: 10px 25px; 
+            border: 1px solid var(--gold); 
+            color: var(--gold); 
+            text-decoration: none; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            transition: 0.3s; 
+        }
+
+        .map-btn:hover { 
+            background: var(--gold); 
+            color: var(--stone); 
+        }
+
+        /* --- CARTE DU RESTAURANT --- */
+        .container { 
+            max-width: 1000px; 
+            margin: 40px auto; 
+            background: white; 
+            padding: 60px; 
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1); 
+        }
+
+        .section-title { 
+            text-align: center; 
+            font-family: 'Cinzel', serif; 
+            color: var(--stone); 
+            margin: 50px 0 30px; 
+            font-size: 1.8rem; 
+            border-bottom: 1px solid var(--gold); 
+            padding-bottom: 10px; 
+            text-transform: uppercase; 
+        }
+        
+        .menu-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 0 50px; 
+        }
+
+        .menu-item { margin-bottom: 25px; }
+
+        .item-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: baseline; 
+        }
+
+        .item-name { 
+            font-weight: 600; 
+            font-size: 1.3rem; 
+            color: #111; 
+        }
+
+        .dots { 
+            flex: 1; 
+            border-bottom: 1px dotted #bbb; 
+            margin: 0 10px; 
+        }
+
+        .price { 
+            color: var(--gold); 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+        }
+
+        .desc { 
+            font-style: italic; 
+            font-size: 1rem; 
+            color: #666; 
+            display: block; 
+            margin-top: 3px; 
+        }
+
+        .info-section { 
+            background: #111; 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+
+        .closed { 
+            color: #ccaa77; 
+            font-weight: bold; 
+            margin-top: 15px; 
+            font-size: 1.1rem; 
+        }
+
+        @media (max-width: 850px) { 
+            .menu-grid { grid-template-columns: 1fr; } 
+            .container { padding: 25px; } 
+            header { height: 70vh; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LES JARRES</h1>
+    <div class="location-tag">Castillon-du-Gard</div>
+</header>
+
+<div class="reserver-banner">
+    <span class="reserver-text">Réservations uniquement par téléphone</span>
+    <a href="tel:0466033384" class="phone-link">04 66 03 33 84</a>
+    
+    <div class="address-box">
+        10 Place du Huit Mai, 30210 Castillon-du-Gard<br>
+        <a href="https://www.google.com/maps/search/?api=1&query=Les+Jarres+Castillon-du-Gard" target="_blank" class="map-btn">📍 Voir l'itinéraire</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">Planches & Entrées</h2>
+    <div class="menu-grid">
+        <div class="menu-item"><div class="item-header"><span class="item-name">Planche gourmande</span><div class="dots"></div><span class="price">21€</span></div><span class="desc">Tapenade, Tomatade, Fromage de chèvre, Thoïonade</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Assortiment Charcuteries & Fromages</span><div class="dots"></div><span class="price">22€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Mini gourmande (2 Tapas)</span><div class="dots"></div><span class="price">12€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Mini charcuteries fromages</span><div class="dots"></div><span class="price">15€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Petite brandade de Morue</span><div class="dots"></div><span class="price">15€</span></div><span class="desc">Croutons à l'huile d'olive</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Os à Moelle et sa Persillade</span><div class="dots"></div><span class="price">15€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Escargots de Bourgogne</span><div class="dots"></div><span class="price">16€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Foie gras poêlé</span><div class="dots"></div><span class="price">22€</span></div><span class="desc">Confit de figues</span></div>
+    </div>
+
+    <h2 class="section-title">Les Plats</h2>
+    <div class="menu-grid">
+        <div class="menu-item"><div class="item-header"><span class="item-name">Viande ou Poisson du Jour</span><div class="dots"></div><span class="price">dès 24€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Brandade de Morue Maison</span><div class="dots"></div><span class="price">23€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Magret de Canard IGP</span><div class="dots"></div><span class="price">27€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Souris d’Agneau au thym</span><div class="dots"></div><span class="price">28€</span></div><span class="desc">Et sa purée maison</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Pluma de cochon</span><div class="dots"></div><span class="price">25€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Tagliata de Bœuf « Angus »</span><div class="dots"></div><span class="price">26€</span></div><span class="desc">Roquette, parmesan, pesto, pignons</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Tête de Veau sauce gribiche</span><div class="dots"></div><span class="price">23€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Cuisses de Grenouille</span><div class="dots"></div><span class="price">23€</span></div><span class="desc">En persillade</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Risotto aux Gambas</span><div class="dots"></div><span class="price">25€</span></div><span class="desc">Bisque, coulis de cresson, parmesan</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Burger Charolais</span><div class="dots"></div><span class="price">21€</span></div><span class="desc">Raclette, sauce paprika fumé</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Gratin de Ravioles du Dauphiné</span><div class="dots"></div><span class="price">19€</span></div></div>
+    </div>
+
+    <h2 class="section-title">Les Desserts</h2>
+    <div class="menu-grid">
+        <div class="menu-item"><div class="item-header"><span class="item-name">Fondant au chocolat</span><div class="dots"></div><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Crème Brûlée</span><div class="dots"></div><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Tiramisu Marron & Spéculoos</span><div class="dots"></div><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Pavlova aux fruits de saison</span><div class="dots"></div><span class="price">9€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Crumble pommes cannelle</span><div class="dots"></div><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Café Gourmand</span><div class="dots"></div><span class="price">10€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Coupe Colonel / Rhum Raisin</span><div class="dots"></div><span class="price">10€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Assiette de 3 Fromages</span><div class="dots"></div><span class="price">8€</span></div></div>
+    </div>
+</div>
+
+<section class="info-section">
+    <h3>Horaires & Informations</h3>
+    <p>Ouvert tous les jours (Midi & Soir)</p>
+    <p class="closed">Fermé le Mardi, Mercredi et Dimanche soir</p>
+</section>
+
+<footer style="text-align:center; padding: 20px; background:#000; color: #444; font-size: 0.8rem;">
+    © Restaurant Les Jarres - Village Médiéval de Castillon-du-Gard
+</footer>
+
+</body>
+</html>
