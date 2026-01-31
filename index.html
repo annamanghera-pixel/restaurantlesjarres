@@ -1,232 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Les Jarres - Castillon-du-Gard - Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Les Jarres - Castillon-du-Gard</title>
   <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fdfaf5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    body { 
+      margin: 0; padding: 0; 
+      background: #000; 
+      color: #ffd700; /* or doré */
+      font-family: 'Georgia', 'Times New Roman', serif; 
+      text-align: center; 
     }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://img.restaurantguru.com/rd77-exterior-Les-Jarres.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 120px 20px 60px;
+    .section { 
+      max-width: 800px; 
+      margin: 40px auto; 
+      padding: 20px; 
+      background: rgba(0,0,0,0.8); 
+      border: 2px solid #d4a373; 
+      border-radius: 8px; 
     }
-    header h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    h1 { 
+      font-size: 3.5em; 
+      margin: 20px 0; 
+      letter-spacing: 4px; 
+      text-transform: uppercase; 
     }
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
+    h2 { 
+      font-size: 2.2em; 
+      margin: 30px 0 10px; 
+      border-bottom: 1px solid #d4a373; 
+      padding-bottom: 10px; 
     }
-    .info {
-      text-align: center;
-      background: #8b4513;
-      color: white;
-      padding: 30px;
-      margin-bottom: 40px;
-      border-radius: 8px;
+    .info { 
+      font-size: 1.6em; 
+      margin: 20px 0; 
     }
-    .info h2 {
-      margin: 0 0 15px;
-      font-size: 2rem;
+    .phone { 
+      font-size: 2.8em; 
+      font-weight: bold; 
+      margin: 15px 0; 
     }
-    .phone {
-      font-size: 2.2rem;
-      font-weight: bold;
-      margin: 10px 0;
+    .address { 
+      font-size: 1.4em; 
+      margin: 10px 0; 
     }
-    .address {
-      font-size: 1.3rem;
+    .menu-item { 
+      font-size: 1.4em; 
+      margin: 12px 0; 
+      display: flex; 
+      justify-content: space-between; 
+      max-width: 600px; 
+      margin-left: auto; 
+      margin-right: auto; 
     }
-    h2.section-title {
-      text-align: center;
-      font-size: 2.4rem;
-      color: #8b4513;
-      border-bottom: 2px solid #d4a373;
-      padding-bottom: 10px;
-      margin: 60px 0 30px;
+    .desc { 
+      font-size: 1.1em; 
+      font-style: italic; 
+      color: #e0c080; 
+      margin: 5px 0 15px; 
+      max-width: 600px; 
+      margin-left: auto; 
+      margin-right: auto; 
     }
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 12px 0;
-      border-bottom: 1px dashed #ccc;
-      font-size: 1.15rem;
-    }
-    .menu-item .name {
-      flex: 1;
-      font-weight: 500;
-    }
-    .menu-item .price {
-      color: #8b4513;
-      font-weight: bold;
-      min-width: 80px;
-      text-align: right;
-    }
-    .menu-item .desc {
-      font-size: 0.95rem;
-      color: #666;
-      margin-top: 4px;
-      font-style: italic;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      object-fit: cover;
-    }
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.8rem; }
-      .phone { font-size: 1.8rem; }
+    .gold-line { 
+      border-bottom: 1px solid #d4a373; 
+      width: 60%; 
+      margin: 5px auto; 
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <!-- Page d'accueil / Infos comme ta première capture -->
+  <div class="section">
     <h1>LES JARRES</h1>
-    <p>CASTILLON-DU-GARD</p>
-  </header>
-
-  <div class="container">
-
+    <p style="font-size:1.8em; letter-spacing:2px;">CASTILLON-DU-GARD</p>
+    
     <div class="info">
-      <h2>RÉSERVATIONS UNIQUEMENT PAR TÉLÉPHONE</h2>
-      <div class="phone">04 66 03 33 84</div>
-      <div class="address">
-        10 PLACE DU HUIT MAI, 30210 CASTILLON-DU-GARD
-      </div>
+      RÉSERVATIONS UNIQUEMENT PAR TÉLÉPHONE
     </div>
-
-    <!-- Galerie restaurant -->
-    <div class="gallery">
-      <img src="https://img.restaurantguru.com/rbd6-interior-Les-Jarres-2024-11.jpg" alt="Façade Les Jarres">
-      <img src="https://img.restaurantguru.com/rd77-exterior-Les-Jarres.jpg" alt="Extérieur Les Jarres">
-      <img src="https://img.restaurantguru.com/r162-Les-Jarres-interior-2022-09.jpg" alt="Intérieur Les Jarres">
-      <img src="https://img.restaurantguru.com/r642-Les-Jarres-food-2024-08.jpg" alt="Plat au restaurant Les Jarres">
+    
+    <div class="phone">04 66 03 33 84</div>
+    
+    <div class="address">
+      10 PLACE DU HUIT MAI, 30210 CASTILLON-<br>DU-GARD
     </div>
+    
+    <div style="margin:20px auto; background:#d4a373; color:#000; padding:12px; width:fit-content; border-radius:4px; font-weight:bold;">
+      VOIR L'ITINÉRAIRE
+    </div>
+  </div>
 
-    <h2 class="section-title">PLANCHES & ENTRÉES</h2>
+  <!-- Planchers & Entrées comme ta deuxième capture -->
+  <div class="section">
+    <h2>PLANCHES & ENTRÉES</h2>
+    <div class="gold-line"></div>
 
     <div class="menu-item">
-      <div class="name">Planche gourmande</div>
-      <div class="price">21€</div>
+      <span>Planche gourmande</span><span>21€</span>
     </div>
     <div class="desc">Tapenade, Tomatade, Fromage de chèvre, Thoïonade</div>
 
     <div class="menu-item">
-      <div class="name">Assortiment Charcuteries & Fromages</div>
-      <div class="price">22€</div>
+      <span>Assortiment Charcuteries & Fromages</span><span>22€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Mini gourmande (2 Tapas au choix)</div>
-      <div class="price">12€</div>
+      <span>Mini gourmande (2 Tapas au choix)</span><span>12€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Mini charcuteries et fromages</div>
-      <div class="price">15€</div>
+      <span>Mini charcuteries et fromages</span><span>15€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Petite brandade de Morue</div>
-      <div class="price">15€</div>
+      <span>Petite brandade de Morue</span><span>15€</span>
     </div>
-    <div class="desc">Croutons à l'huile d'olive</div>
+    <div class="desc">Croustons à l'huile d'olive</div>
 
     <div class="menu-item">
-      <div class="name">Os à Moelle et sa Persillade</div>
-      <div class="price">15€</div>
+      <span>Os à Moelle et sa Persillade</span><span>15€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Escargots de Bourgogne (x6)</div>
-      <div class="price">16€</div>
+      <span>Escargots de Bourgogne (x6)</span><span>16€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Foie gras poêlé</div>
-      <div class="price">22€</div>
+      <span>Foie gras poêlé</span><span>22€</span>
     </div>
     <div class="desc">Confit de figues</div>
 
-    <!-- Photos planches -->
-    <div class="gallery">
-      <img src="https://images.radio-canada.ca/v1/alimentation/recette/16x9/planche-mediterraneenne-italienne.jpg" alt="Planche gourmande apéro">
-      <img src="https://boucherie-dynamique.com/3127-thickbox_default/plateau-apero-bistrot-1-piece-de-430g.jpg" alt="Assortiment charcuteries et fromages">
-      <img src="https://resize.elle.fr/original/var/plain_site/storage/images/elle-a-table/les-dossiers-de-la-redaction/dossier-de-la-redac/plateau-de-charcuterie/94990482-2-fre-FR/Comment-faire-un-plateau-de-fromage-et-charcuterie-digne-d-Instagram.jpg" alt="Planche charcuterie fromages">
-    </div>
+    <!-- Petit footer bizarre de ta capture -->
+    <p style="font-size:1.2em; margin-top:40px; color:#ccc;">LES PLATS</p>
+  </div>
 
-    <h2 class="section-title">LES DESSERTS</h2>
-
-    <div class="menu-item">
-      <div class="name">Fondant au chocolat</div>
-      <div class="price">8€</div>
-    </div>
+  <!-- Desserts comme ta troisième capture -->
+  <div class="section">
+    <h2>LES DESSERTS</h2>
+    <div class="gold-line"></div>
 
     <div class="menu-item">
-      <div class="name">Crème Brûlée</div>
-      <div class="price">8€</div>
+      <span>Fondant au chocolat</span><span>8€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Tiramisu Marron & Spéculoos</div>
-      <div class="price">8€</div>
+      <span>Crème Brûlée</span><span>8€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Pavlova aux fruits de saison</div>
-      <div class="price">9€</div>
+      <span>Tiramisu Marron & Spéculoos</span><span>8€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Crumble pommes cannelle</div>
-      <div class="price">8€</div>
+      <span>Pavlova aux fruits de saison</span><span>9€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Café Gourmand</div>
-      <div class="price">10€</div>
+      <span>Crumble pommes cannelle</span><span>8€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Coupe Colonel / Rhum Raisin</div>
-      <div class="price">10€</div>
+      <span>Café Gourmand</span><span>10€</span>
     </div>
 
     <div class="menu-item">
-      <div class="name">Assiette de 3 Fromages</div>
-      <div class="price">8€</div>
+      <span>Coupe Colonel / Rhum Raisin</span><span>10€</span>
     </div>
 
-    <!-- Photos desserts -->
-    <div class="gallery">
-      <img src="http://patissland.fr/cdn/shop/articles/recette-du-fondant-au-chocolat-patissland_027015d7-c334-49f0-9e9e-d48a758785fe.png?v=1742153509" alt="Fondant au chocolat">
-      <img src="https://en.rians.com/wp-content/uploads/sites/8/2022/04/CremeBrulee_Vanille-e1650437745873.jpg" alt="Crème Brûlée">
-      <img src="https://www.galbani.be/wp-content/uploads/2017/07/contenu-2-800x600-1-800x600.jpg" alt="Tiramisu marron spéculoos">
-      <img src="https://cuisinedesbasques.com/wp-content/uploads/2022/11/Pavlova-aux-fruits-exotiques-et-chantilly-au-yuzu.jpg-2.jpg" alt="Pavlova aux fruits de saison">
+    <div class="menu-item">
+      <span>Assiette de 3 Fromages</span><span>8€</span>
     </div>
-
   </div>
 
 </body>
