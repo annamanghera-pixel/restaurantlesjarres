@@ -7,16 +7,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
 
-        :root {
-            --pierre: #fdfaf5;
-            --sable: #d4b483;
-            --terre: #4a3c31;
-        }
-
         body {
             font-family: 'Cormorant Garamond', serif;
-            background-color: #f5f2ed;
-            color: var(--terre);
+            background-color: #f5f2ed; /* Couleur Pierre/Sable */
+            color: #4a3c31; /* Marron terre */
             margin: 0;
             padding: 0;
         }
@@ -25,61 +19,54 @@
             background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('facade.png');
             background-size: cover;
             background-position: center;
-            height: 70vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
-            text-align: center;
         }
 
         header h1 {
-            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-size: 3.5rem;
+            margin: 0;
             letter-spacing: 5px;
             text-transform: uppercase;
-            margin: 0;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .container {
-            max-width: 850px;
-            margin: -60px auto 40px;
-            background: white;
+            max-width: 800px;
+            margin: -50px auto 40px;
+            background: #fffcf7; /* Blanc crème */
             padding: 40px;
             border-radius: 2px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            border: 1px solid #e5dfd3;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e2d1b3;
         }
 
         h2 {
             text-align: center;
-            border-bottom: 1px solid var(--sable);
+            border-bottom: 1px solid #d4b483;
             padding-bottom: 10px;
             margin-top: 40px;
-            color: #8c7356;
+            color: #8c6d46;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-weight: 700;
         }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px dotted #e5dfd3;
-            font-size: 1.25rem;
-        }
-
-        .menu-item span:last-child {
-            font-weight: bold;
-            color: #8c7356;
+            padding: 12px 0;
+            border-bottom: 1px dotted #e2d1b3;
+            font-size: 1.2rem;
         }
 
         .footer {
             text-align: center;
-            padding: 60px 20px;
-            background-color: var(--terre);
+            padding: 40px;
+            background-color: #4a3c31;
             color: #f5f2ed;
             margin-top: 50px;
         }
@@ -93,23 +80,21 @@
 
 <div class="container">
     <h2>Entrées</h2>
-    <div class="menu-item"><span>Aubergine rôtie, stracciatella, pistache</span><span>14€</span></div>
-    <div class="menu-item"><span>Tataki de thon, sésame, soja, gingembre</span><span>16€</span></div>
-    <div class="menu-item"><span>Carpaccio de bœuf, parmesan, roquette</span><span>15€</span></div>
-    <div class="menu-item"><span>Salade de tomates anciennes, burrata</span><span>14€</span></div>
+    <div class="menu-item"><span>Brandade de morue maison</span><span>11€</span></div>
+    <div class="menu-item"><span>Camembert rôti au miel</span><span>12€</span></div>
+    <div class="menu-item"><span>Planche de charcuterie</span><span>16€</span></div>
 
     <h2>Plats</h2>
-    <div class="menu-item"><span>Filet de bar grillé, légumes de saison</span><span>26€</span></div>
-    <div class="menu-item"><span>Entrecôte grillée, frites maison, sauce poivre</span><span>28€</span></div>
-    <div class="menu-item"><span>Risotto aux champignons sauvages, truffe d'été</span><span>22€</span></div>
-    <div class="menu-item"><span>Souris d'agneau confite, purée maison</span><span>24€</span></div>
+    <div class="menu-item"><span>Seiche à la sétoise</span><span>18€</span></div>
+    <div class="menu-item"><span>Gardiane de taureau</span><span>19€</span></div>
+    <div class="menu-item"><span>Burger des Jarres</span><span>17€</span></div>
 
     <h2>Desserts</h2>
-    <div class="menu-item"><span>Fondant au chocolat, glace vanille</span><span>9€</span></div>
-    <div class="menu-item"><span>Crème brûlée à la lavande</span><span>8€</span></div>
-    <div class="menu-item"><span>Tiramisu speculoos</span><span>8€</span></div>
+    <div class="menu-item"><span>Fondant au chocolat</span><span>8€</span></div>
+    <div class="menu-item"><span>Crème brûlée</span><span>8€</span></div>
+    <div class="menu-item"><span>Tiramisu</span><span>8€</span></div>
     <br>
-    <div class="menu-item"><span>Pavlova aux fruits rouges</span><span>10€</span></div>
+    <div class="menu-item"><span>Pavlova</span><span>9€</span></div>
 </div>
 
 <div class="footer">
