@@ -6,30 +6,163 @@
     <title>Restaurant Les Jarres | Castillon-du-Gard</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #d4af37; --stone: #1a1a1a; --cream: #fdfaf5; }
-        body { font-family: 'Cormorant Garamond', serif; background-color: var(--cream); color: #333; margin: 0; padding: 0; line-height: 1.6; }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('facade.png') no-repeat center/cover;
-            height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;
+        :root { 
+            --gold: #c4a484; /* Couleur sable doré */
+            --stone: #4a4540; /* Couleur pierre sombre */
+            --cream: #f9f6f0; /* Couleur pierre de Gard claire */
+            --terracotta: #8d6d4d; /* Terre cuite rustique */
         }
-        h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 10vw, 5.5rem); margin: 0; color: var(--gold); letter-spacing: 10px; text-shadow: 3px 3px 15px rgba(0,0,0,0.8); }
-        .location-tag { font-family: 'Cinzel', serif; letter-spacing: 5px; color: #fff; font-size: 1.3rem; margin-top: 10px; text-transform: uppercase; }
-        .reserver-banner { background: var(--stone); color: white; text-align: center; padding: 40px 20px; border-bottom: 2px solid var(--gold); }
-        .phone-link { color: white; text-decoration: none; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: bold; letter-spacing: 4px; }
-        .container { max-width: 1000px; margin: 40px auto; background: white; padding: 60px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); }
-        .section-title { text-align: center; font-family: 'Cinzel', serif; color: var(--stone); margin: 50px 0 30px; font-size: 1.8rem; border-bottom: 1px solid var(--gold); padding-bottom: 10px; text-transform: uppercase; }
-        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
-        .menu-item { margin-bottom: 25px; }
-        .item-header { display: flex; justify-content: space-between; align-items: baseline; }
-        .item-name { font-weight: 600; font-size: 1.25rem; color: #111; }
-        .dots { flex: 1; border-bottom: 1px dotted #bbb; margin: 0 10px; }
-        .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
-        .desc { font-style: italic; font-size: 0.95rem; color: #666; display: block; margin-top: 3px; }
-        .info-section { background: #111; color: white; padding: 60px 20px; text-align: center; }
-        footer { text-align:center; padding: 40px 20px; background:#000; color: #666; }
-        .social-link { color: #d4af37; text-decoration: none; margin: 0 15px; font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 2px; }
-        @media (max-width: 850px) { .menu-grid { grid-template-columns: 1fr; } .container { padding: 25px; } }
+        
+        body { 
+            font-family: 'Cormorant Garamond', serif; 
+            background-color: var(--cream); 
+            color: var(--stone); 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.6; 
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('facade.png') no-repeat center/cover;
+            height: 70vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            color: white; 
+            text-align: center;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        h1 { 
+            font-family: 'Cinzel', serif; 
+            font-size: clamp(3rem, 10vw, 5.5rem); 
+            margin: 0; 
+            color: #fff; 
+            letter-spacing: 8px; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
+        }
+
+        .location-tag { 
+            font-family: 'Cinzel', serif; 
+            letter-spacing: 5px; 
+            color: var(--gold); 
+            font-size: 1.3rem; 
+            margin-top: 10px; 
+            text-transform: uppercase; 
+        }
+
+        .reserver-banner { 
+            background: var(--stone); 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+        }
+
+        .phone-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            font-size: clamp(1.8rem, 5vw, 2.8rem); 
+            font-weight: bold; 
+            letter-spacing: 4px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .container { 
+            max-width: 1000px; 
+            margin: -40px auto 40px; 
+            background: #fff; 
+            padding: 60px; 
+            box-shadow: 0 15px 50px rgba(0,0,0,0.05);
+            border: 1px solid #e0dcd5;
+        }
+
+        .section-title { 
+            text-align: center; 
+            font-family: 'Cinzel', serif; 
+            color: var(--terracotta); 
+            margin: 60px 0 40px; 
+            font-size: 2rem; 
+            border-bottom: 1px solid var(--gold); 
+            padding-bottom: 15px; 
+            text-transform: uppercase; 
+            letter-spacing: 3px;
+        }
+
+        .menu-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 0 60px; 
+        }
+
+        .menu-item { 
+            margin-bottom: 35px; 
+            border-bottom: 1px solid #f0ede8;
+            padding-bottom: 10px;
+        }
+
+        .item-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: baseline; 
+        }
+
+        .item-name { 
+            font-weight: 600; 
+            font-size: 1.35rem; 
+            color: var(--stone); 
+        }
+
+        .price { 
+            color: var(--terracotta); 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            font-family: 'Cinzel', serif;
+        }
+
+        .desc { 
+            font-style: italic; 
+            font-size: 1rem; 
+            color: #7a746e; 
+            display: block; 
+            margin-top: 5px; 
+        }
+
+        .info-section { 
+            background: var(--stone); 
+            color: var(--cream); 
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+
+        .info-section h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        footer { 
+            text-align:center; 
+            padding: 40px 20px; 
+            background: #36322e; 
+            color: #b5ada3; 
+        }
+
+        .social-link { 
+            color: var(--gold); 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-family: 'Cinzel', serif; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+        }
+
+        @media (max-width: 850px) { 
+            .menu-grid { grid-template-columns: 1fr; } 
+            .container { padding: 30px; margin-top: 20px; } 
+        }
     </style>
 </head>
 <body>
@@ -40,58 +173,58 @@
 </header>
 
 <div class="reserver-banner">
-    <span style="display:block; color:var(--gold); font-family:'Cinzel'; margin-bottom:10px;">Réservations uniquement par téléphone</span>
+    <span style="display:block; color:#b5ada3; font-family:'Cinzel'; margin-bottom:10px; letter-spacing: 2px;">Réservations uniquement par téléphone</span>
     <a href="tel:0466033384" class="phone-link">04 66 03 33 84</a>
     <div style="margin-top:20px; font-family:'Cinzel';">
-        <a href="https://www.google.com/maps/dir//Restaurant+Les+Jarres,+10+Pl.+du+8+Mai,+30210+Castillon-du-Gard/" style="color: white; text-decoration: none;">📍 10 Place du Huit Mai, 30210 Castillon-du-Gard</a>
+        <a href="https://www.google.com/maps/dir//10+Pl.+du+Huit+Mai,+30210+Castillon-du-Gard" style="color: white; text-decoration: none; letter-spacing: 1px;">📍 10 Place du Huit Mai, 30210 Castillon-du-Gard</a>
     </div>
 </div>
 
 <div class="container">
     <h2 class="section-title">Planches & Entrées</h2>
     <div class="menu-grid">
-        <div class="menu-item"><div class="item-header"><span class="item-name">Planche gourmande</span><div class="dots"></div><span class="price">21€</span></div><span class="desc">Tapenade, Tomatade, Fromage de chèvre, Thoïonade</span></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Assortiment Charcuteries & Fromages</span><div class="dots"></div><span class="price">22€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Mini gourmande (2 Tapas au choix)</span><div class="dots"></div><span class="price">12€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Mini charcuteries et fromages</span><div class="dots"></div><span class="price">15€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Petite brandade de Morue</span><div class="dots"></div><span class="price">15€</span></div><span class="desc">Croutons à l'huile d'olive</span></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Os à Moelle et sa Persillade</span><div class="dots"></div><span class="price">15€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Escargots de Bourgogne (x6)</span><div class="dots"></div><span class="price">16€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Foie gras poêlé</span><div class="dots"></div><span class="price">22€</span></div><span class="desc">Confit de figues</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Planche gourmande</span><span class="price">21€</span></div><span class="desc">Tapenade, Tomatade, Fromage de chèvre, Thoïonade</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Assortiment Charcuteries & Fromages</span><span class="price">22€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Mini gourmande (2 Tapas au choix)</span><span class="price">12€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Mini charcuteries et fromages</span><span class="price">15€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Petite brandade de Morue</span><span class="price">15€</span></div><span class="desc">Croutons à l'huile d'olive</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Os à Moelle et sa Persillade</span><span class="price">15€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Escargots de Bourgogne (x6)</span><span class="price">16€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Foie gras poêlé</span><span class="price">22€</span></div><span class="desc">Confit de figues</span></div>
     </div>
 
     <h2 class="section-title">Les Plats</h2>
     <div class="menu-grid">
-        <div class="menu-item"><div class="item-header"><span class="item-name">Viande ou Poisson du Jour</span><div class="dots"></div><span class="price">dès 24€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Brandade de Morue Maison</span><div class="dots"></div><span class="price">23€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Magret de Canard IGP</span><div class="dots"></div><span class="price">27€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Souris d’Agneau au thym</span><div class="dots"></div><span class="price">28€</span></div><span class="desc">Et sa purée maison</span></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Pluma de cochon</span><div class="dots"></div><span class="price">25€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Tagliata de Bœuf « Angus »</span><div class="dots"></div><span class="price">26€</span></div><span class="desc">Roquette, parmesan, pesto, pignons</span></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Tête de Veau sauce gribiche</span><div class="dots"></div><span class="price">23€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Cuisses de Grenouille</span><div class="dots"></div><span class="price">23€</span></div><span class="desc">En persillade</span></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Risotto aux Gambas</span><div class="dots"></div><span class="price">25€</span></div><span class="desc">Bisque, coulis de cresson, parmesan</span></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Burger Charolais</span><div class="dots"></div><span class="price">21€</span></div><span class="desc">Raclette, sauce paprika fumé</span></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Gratin de Ravioles du Dauphiné</span><div class="dots"></div><span class="price">19€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Viande ou Poisson du Jour</span><span class="price">dès 24€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Brandade de Morue Maison</span><span class="price">23€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Magret de Canard IGP</span><span class="price">27€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Souris d’Agneau au thym</span><span class="price">28€</span></div><span class="desc">Et sa purée maison</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Pluma de cochon</span><span class="price">25€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Tagliata de Bœuf « Angus »</span><span class="price">26€</span></div><span class="desc">Roquette, parmesan, pesto, pignons</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Tête de Veau sauce gribiche</span><span class="price">23€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Cuisses de Grenouille</span><span class="price">23€</span></div><span class="desc">En persillade</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Risotto aux Gambas</span><span class="price">25€</span></div><span class="desc">Bisque, coulis de cresson, parmesan</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Burger Charolais</span><span class="price">21€</span></div><span class="desc">Raclette, sauce paprika fumé</span></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Gratin de Ravioles du Dauphiné</span><span class="price">19€</span></div></div>
     </div>
 
     <h2 class="section-title">Les Desserts</h2>
     <div class="menu-grid">
-        <div class="menu-item"><div class="item-header"><span class="item-name">Fondant au chocolat</span><div class="dots"></div><span class="price">8€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Crème Brûlée</span><div class="dots"></div><span class="price">8€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Tiramisu Marron & Spéculoos</span><div class="dots"></div><span class="price">8€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Pavlova aux fruits de saison</span><div class="dots"></div><span class="price">9€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Crumble pommes cannelle</span><div class="dots"></div><span class="price">8€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Café Gourmand</span><div class="dots"></div><span class="price">10€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Coupe Colonel / Rhum Raisin</span><div class="dots"></div><span class="price">10€</span></div></div>
-        <div class="menu-item"><div class="item-header"><span class="item-name">Assiette de 3 Fromages</span><div class="dots"></div><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Fondant au chocolat</span><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Crème Brûlée</span><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Tiramisu Marron & Spéculoos</span><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Pavlova aux fruits de saison</span><span class="price">9€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Crumble pommes cannelle</span><span class="price">8€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Café Gourmand</span><span class="price">10€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Coupe Colonel / Rhum Raisin</span><span class="price">10€</span></div></div>
+        <div class="menu-item"><div class="item-header"><span class="item-name">Assiette de 3 Fromages</span><span class="price">8€</span></div></div>
     </div>
 </div>
 
 <section class="info-section">
     <h3>Horaires & Informations</h3>
     <p>Ouvert tous les jours (Midi & Soir)</p>
-    <p style="color:#ccaa77; font-weight:bold;">Fermé le Mardi, Mercredi et Dimanche soir</p>
+    <p style="color:var(--gold); font-weight:bold; font-family:'Cinzel';">Fermé le Mardi, Mercredi et Dimanche soir</p>
 </section>
 
 <footer>
