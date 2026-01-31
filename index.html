@@ -3,175 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Les Jarres - Castillon-du-Gard</title>
+  <title>Restaurant Les Jarres</title>
   <style>
-    body { 
-      margin: 0; padding: 0; 
-      background: #000; 
-      color: #ffd700; /* or doré */
-      font-family: 'Georgia', 'Times New Roman', serif; 
-      text-align: center; 
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #d4af37; /* doré comme dans tes captures */
+      font-family: 'Georgia', 'Times New Roman', serif;
+      text-align: center;
+      line-height: 1.4;
     }
-    .section { 
-      max-width: 800px; 
-      margin: 40px auto; 
-      padding: 20px; 
-      background: rgba(0,0,0,0.8); 
-      border: 2px solid #d4a373; 
-      border-radius: 8px; 
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    h1 { 
-      font-size: 3.5em; 
-      margin: 20px 0; 
-      letter-spacing: 4px; 
-      text-transform: uppercase; 
+    h1 {
+      font-size: 4.5em;
+      margin: 30px 0 10px;
+      letter-spacing: 8px;
+      text-transform: uppercase;
     }
-    h2 { 
-      font-size: 2.2em; 
-      margin: 30px 0 10px; 
-      border-bottom: 1px solid #d4a373; 
-      padding-bottom: 10px; 
+    .subtitle {
+      font-size: 2em;
+      letter-spacing: 4px;
+      margin-bottom: 80px;
     }
-    .info { 
-      font-size: 1.6em; 
-      margin: 20px 0; 
+    .reservations-title {
+      font-size: 2.2em;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      letter-spacing: 2px;
     }
-    .phone { 
-      font-size: 2.8em; 
-      font-weight: bold; 
-      margin: 15px 0; 
+    .phone {
+      font-size: 4em;
+      margin: 20px 0 15px;
+      letter-spacing: 3px;
     }
-    .address { 
-      font-size: 1.4em; 
-      margin: 10px 0; 
+    .address {
+      font-size: 1.8em;
+      margin: 20px 0 50px;
     }
-    .menu-item { 
-      font-size: 1.4em; 
-      margin: 12px 0; 
-      display: flex; 
-      justify-content: space-between; 
-      max-width: 600px; 
-      margin-left: auto; 
-      margin-right: auto; 
+    .itineraire {
+      display: inline-block;
+      background: #d4af37;
+      color: #000;
+      padding: 15px 30px;
+      font-size: 1.6em;
+      font-weight: bold;
+      border-radius: 6px;
+      margin: 30px 0;
     }
-    .desc { 
-      font-size: 1.1em; 
-      font-style: italic; 
-      color: #e0c080; 
-      margin: 5px 0 15px; 
-      max-width: 600px; 
-      margin-left: auto; 
-      margin-right: auto; 
+    h2 {
+      font-size: 3em;
+      margin: 100px 0 40px;
+      letter-spacing: 3px;
     }
-    .gold-line { 
-      border-bottom: 1px solid #d4a373; 
-      width: 60%; 
-      margin: 5px auto; 
+    .menu-line {
+      font-size: 1.8em;
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .menu-line span:first-child {
+      text-align: left;
+      flex: 1;
+    }
+    .menu-line span:last-child {
+      text-align: right;
+      min-width: 120px;
+    }
+    .desc {
+      font-size: 1.4em;
+      font-style: italic;
+      color: #e0c080;
+      max-width: 750px;
+      margin: 5px auto 30px;
+    }
+    .hr-gold {
+      border: 0;
+      height: 1px;
+      background: #d4af37;
+      width: 40%;
+      margin: 15px auto;
     }
   </style>
 </head>
 <body>
 
-  <!-- Page d'accueil / Infos comme ta première capture -->
-  <div class="section">
+  <div class="container">
+
+    <!-- Première capture : Accueil -->
     <h1>LES JARRES</h1>
-    <p style="font-size:1.8em; letter-spacing:2px;">CASTILLON-DU-GARD</p>
-    
-    <div class="info">
-      RÉSERVATIONS UNIQUEMENT PAR TÉLÉPHONE
-    </div>
-    
+    <div class="subtitle">CASTILLON-DU-GARD</div>
+
+    <div class="reservations-title">RÉSERVATIONS UNIQUEMENT PAR TÉLÉPHONE</div>
     <div class="phone">04 66 03 33 84</div>
-    
     <div class="address">
       10 PLACE DU HUIT MAI, 30210 CASTILLON-<br>DU-GARD
     </div>
-    
-    <div style="margin:20px auto; background:#d4a373; color:#000; padding:12px; width:fit-content; border-radius:4px; font-weight:bold;">
-      VOIR L'ITINÉRAIRE
-    </div>
-  </div>
+    <div class="itineraire">VOIR L'ITINÉRAIRE</div>
 
-  <!-- Planchers & Entrées comme ta deuxième capture -->
-  <div class="section">
+    <!-- Deuxième capture : Planchers & Entrées -->
     <h2>PLANCHES & ENTRÉES</h2>
-    <div class="gold-line"></div>
+    <div class="hr-gold"></div>
 
-    <div class="menu-item">
-      <span>Planche gourmande</span><span>21€</span>
-    </div>
+    <div class="menu-line"><span>Planche gourmande</span><span>21€</span></div>
     <div class="desc">Tapenade, Tomatade, Fromage de chèvre, Thoïonade</div>
 
-    <div class="menu-item">
-      <span>Assortiment Charcuteries & Fromages</span><span>22€</span>
-    </div>
+    <div class="menu-line"><span>Assortiment Charcuteries & Fromages</span><span>22€</span></div>
 
-    <div class="menu-item">
-      <span>Mini gourmande (2 Tapas au choix)</span><span>12€</span>
-    </div>
+    <div class="menu-line"><span>Mini gourmande (2 Tapas au choix)</span><span>12€</span></div>
 
-    <div class="menu-item">
-      <span>Mini charcuteries et fromages</span><span>15€</span>
-    </div>
+    <div class="menu-line"><span>Mini charcuteries et fromages</span><span>15€</span></div>
 
-    <div class="menu-item">
-      <span>Petite brandade de Morue</span><span>15€</span>
-    </div>
-    <div class="desc">Croustons à l'huile d'olive</div>
+    <div class="menu-line"><span>Petite brandade de Morue</span><span>15€</span></div>
+    <div class="desc">Croutons à l'huile d'olive</div>
 
-    <div class="menu-item">
-      <span>Os à Moelle et sa Persillade</span><span>15€</span>
-    </div>
+    <div class="menu-line"><span>Os à Moelle et sa Persillade</span><span>15€</span></div>
 
-    <div class="menu-item">
-      <span>Escargots de Bourgogne (x6)</span><span>16€</span>
-    </div>
+    <div class="menu-line"><span>Escargots de Bourgogne (x6)</span><span>16€</span></div>
 
-    <div class="menu-item">
-      <span>Foie gras poêlé</span><span>22€</span>
-    </div>
+    <div class="menu-line"><span>Foie gras poêlé</span><span>22€</span></div>
     <div class="desc">Confit de figues</div>
 
-    <!-- Petit footer bizarre de ta capture -->
-    <p style="font-size:1.2em; margin-top:40px; color:#ccc;">LES PLATS</p>
-  </div>
-
-  <!-- Desserts comme ta troisième capture -->
-  <div class="section">
+    <!-- Troisième capture : Desserts -->
     <h2>LES DESSERTS</h2>
-    <div class="gold-line"></div>
+    <div class="hr-gold"></div>
 
-    <div class="menu-item">
-      <span>Fondant au chocolat</span><span>8€</span>
-    </div>
+    <div class="menu-line"><span>Fondant au chocolat</span><span>8€</span></div>
 
-    <div class="menu-item">
-      <span>Crème Brûlée</span><span>8€</span>
-    </div>
+    <div class="menu-line"><span>Crème Brûlée</span><span>8€</span></div>
 
-    <div class="menu-item">
-      <span>Tiramisu Marron & Spéculoos</span><span>8€</span>
-    </div>
+    <div class="menu-line"><span>Tiramisu Marron & Spéculoos</span><span>8€</span></div>
 
-    <div class="menu-item">
-      <span>Pavlova aux fruits de saison</span><span>9€</span>
-    </div>
+    <div class="menu-line"><span>Pavlova aux fruits de saison</span><span>9€</span></div>
 
-    <div class="menu-item">
-      <span>Crumble pommes cannelle</span><span>8€</span>
-    </div>
+    <div class="menu-line"><span>Crumble pommes cannelle</span><span>8€</span></div>
 
-    <div class="menu-item">
-      <span>Café Gourmand</span><span>10€</span>
-    </div>
+    <div class="menu-line"><span>Café Gourmand</span><span>10€</span></div>
 
-    <div class="menu-item">
-      <span>Coupe Colonel / Rhum Raisin</span><span>10€</span>
-    </div>
+    <div class="menu-line"><span>Coupe Colonel / Rhum Raisin</span><span>10€</span></div>
 
-    <div class="menu-item">
-      <span>Assiette de 3 Fromages</span><span>8€</span>
-    </div>
+    <div class="menu-line"><span>Assiette de 3 Fromages</span><span>8€</span></div>
+
   </div>
 
 </body>
